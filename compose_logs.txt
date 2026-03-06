@@ -1,0 +1,617 @@
+﻿docker : time="2026-03
+-05T11:50:13+05:30" 
+level=warning msg="C:\
+\Users\\savin\\Multi-R
+egion-Incident-Managem
+ent-System\\docker-com
+pose.yml: the 
+attribute `version` 
+is obsolete, it will 
+be ignored, please 
+remove it to avoid 
+potential confusion"
+At line:1 char:1
++ docker compose logs 
+2>&1 | Out-File 
+-FilePath "C:\Users\sa
+vin\Multi-R ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: (time="2026   
+ -03-0...tial conf    
+usion":String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+region-eu  | INFO:     Started server process [1]
+region-eu  | INFO:     Waiting for application startup.
+region-eu  | 2026-03-05 05:59:58,680 [INFO] app.main: Starting region service: eu
+region-eu  | 2026-03-05 05:59:58,760 [INFO] app.replication: [Replication Worker] started for region=eu, peers=['http://region-us:8000', 'http://region-apac:8000'], interval=5s
+region-eu  | INFO:     Application startup complete.
+region-eu  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+region-eu  | INFO:     127.0.0.1:47880 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:54570 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:33346 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:42662 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:37126 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:37768 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:48080 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:38460 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:34632 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:35186 - "GET /health HTTP/1.1" 200 OK
+db-apac    | The files belonging to this database system will be owned by user "postgres".
+db-apac    | This user must also own the server process.
+db-apac    | 
+db-apac    | The database cluster will be initialized with locale "en_US.utf8".
+db-apac    | The default database encoding has accordingly been set to "UTF8".
+db-apac    | The default text search configuration will be set to "english".
+db-apac    | 
+db-apac    | Data page checksums are disabled.
+db-apac    | 
+db-apac    | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-apac    | creating subdirectories ... ok
+db-apac    | selecting dynamic shared memory implementation ... posix
+db-apac    | selecting default max_connections ... 100
+db-apac    | selecting default shared_buffers ... 128MB
+db-apac    | selecting default time zone ... Etc/UTC
+db-apac    | creating configuration files ... ok
+db-apac    | running bootstrap script ... ok
+db-apac    | performing post-bootstrap initialization ... ok
+db-apac    | syncing data to disk ... ok
+db-apac    | 
+db-apac    | 
+db-apac    | Success. You can now start the database server using:
+db-apac    | 
+db-apac    |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-apac    | 
+db-apac    | initdb: warning: enabling "trust" authentication for local connections
+db-apac    | You can change this by editing pg_hba.conf or using the option -A, or
+db-apac    | --auth-local and --auth-host, the next time you run initdb.
+region-eu  | INFO:     127.0.0.1:39340 - "GET /health HTTP/1.1" 200 OK
+db-apac    | waiting for server to start....2026-03-05 05:59:54.458 UTC [48] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-apac    | 2026-03-05 05:59:54.468 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-apac    | 2026-03-05 05:59:54.496 UTC [49] LOG:  database system was shut down at 2026-03-05 05:59:53 UTC
+db-apac    | 2026-03-05 05:59:54.517 UTC [48] LOG:  database system is ready to accept connections
+db-apac    |  done
+db-apac    | server started
+db-apac    | CREATE DATABASE
+db-apac    | 
+db-apac    | 
+db-apac    | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+db-apac    | CREATE EXTENSION
+db-apac    | CREATE TABLE
+db-apac    | CREATE INDEX
+db-apac    | CREATE INDEX
+db-apac    | 
+db-apac    | 
+db-apac    | waiting for server to shut down....2026-03-05 05:59:55.684 UTC [48] LOG:  received fast shutdown request
+db-apac    | 2026-03-05 05:59:55.689 UTC [48] LOG:  aborting any active transactions
+db-apac    | 2026-03-05 05:59:55.696 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+region-eu  | INFO:     127.0.0.1:57912 - "GET /health HTTP/1.1" 200 OK
+db-apac    | 2026-03-05 05:59:55.700 UTC [50] LOG:  shutting down
+db-apac    | 2026-03-05 05:59:55.850 UTC [48] LOG:  database system is shut down
+db-apac    |  done
+db-apac    | server stopped
+db-apac    | 
+db-apac    | PostgreSQL init process complete; ready for start up.
+db-apac    | 
+db-apac    | 2026-03-05 05:59:55.947 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-apac    | 2026-03-05 05:59:55.949 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-apac    | 2026-03-05 05:59:55.949 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-apac    | 2026-03-05 05:59:55.959 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-apac    | 2026-03-05 05:59:55.972 UTC [73] LOG:  database system was shut down at 2026-03-05 05:59:55 UTC
+db-apac    | 2026-03-05 05:59:55.993 UTC [1] LOG:  database system is ready to accept connections
+db-apac    | 2026-03-05 06:16:15.517 UTC [1] LOG:  received fast shutdown request
+db-apac    | 2026-03-05 06:16:15.521 UTC [1] LOG:  aborting any active transactions
+db-apac    | 2026-03-05 06:16:15.523 UTC [1] LOG:  background worker "logical replication launcher" (PID 79) exited with exit code 1
+db-apac    | 2026-03-05 06:16:15.523 UTC [74] LOG:  shutting down
+db-apac    | 2026-03-05 06:16:15.541 UTC [1] LOG:  database system is shut down
+db-apac    | 
+db-apac    | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-apac    | 
+db-apac    | 2026-03-05 06:18:11.468 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-apac    | 2026-03-05 06:18:11.468 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-apac    | 2026-03-05 06:18:11.468 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-apac    | 2026-03-05 06:18:11.476 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-apac    | 2026-03-05 06:18:11.486 UTC [27] LOG:  database system was shut down at 2026-03-05 06:16:15 UTC
+db-apac    | 2026-03-05 06:18:11.493 UTC [1] LOG:  database system is ready to accept connections
+region-eu  | INFO:     127.0.0.1:56412 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:60700 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:45522 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:49204 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:58188 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:33790 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:40154 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:53618 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:34696 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:46264 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41298 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:49564 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:46284 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:44116 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:49600 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41644 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:51702 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:50262 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:46898 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:45528 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:60712 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:59946 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:57126 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:36694 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:48956 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:56982 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:48122 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:38928 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:60626 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:54614 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:38510 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:53010 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:42378 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:33614 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41736 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:38892 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:42656 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:42512 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:45878 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:48012 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:59882 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:46988 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:48824 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41176 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:34942 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:57362 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:46326 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:43858 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:35772 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:51312 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:44754 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:48368 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:40522 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:54598 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:47236 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:51856 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:53688 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55204 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:59144 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:43558 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:38756 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41898 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55456 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:45764 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:58992 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55766 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:40324 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:57680 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:37142 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:37828 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:38886 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55362 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:46064 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:58158 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:32772 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:58874 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:49108 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41296 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:60118 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55378 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:37090 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:41656 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:50344 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     Shutting down
+region-eu  | INFO:     Waiting for application shutdown.
+region-eu  | INFO:     Application shutdown complete.
+region-eu  | INFO:     Finished server process [1]
+region-eu  | INFO:     Started server process [1]
+region-eu  | INFO:     Waiting for application startup.
+region-eu  | 2026-03-05 06:18:18,100 [INFO] app.main: Starting region service: eu
+region-eu  | 2026-03-05 06:18:18,116 [INFO] app.replication: [Replication Worker] started for region=eu, peers=['http://region-us:8000', 'http://region-apac:8000'], interval=5s
+region-eu  | INFO:     Application startup complete.
+region-eu  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+region-eu  | INFO:     127.0.0.1:45890 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:45874 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55296 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:54086 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:39592 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:55602 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:42940 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:44046 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:35366 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:52472 - "GET /health HTTP/1.1" 200 OK
+region-eu  | INFO:     127.0.0.1:37004 - "GET /health HTTP/1.1" 200 OK
+db-eu      | The files belonging to this database system will be owned by user "postgres".
+db-eu      | This user must also own the server process.
+db-eu      | 
+db-eu      | The database cluster will be initialized with locale "en_US.utf8".
+db-eu      | The default database encoding has accordingly been set to "UTF8".
+db-eu      | The default text search configuration will be set to "english".
+db-eu      | 
+db-eu      | Data page checksums are disabled.
+db-eu      | 
+db-eu      | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-eu      | creating subdirectories ... ok
+db-eu      | selecting dynamic shared memory implementation ... posix
+db-eu      | selecting default max_connections ... 100
+db-eu      | selecting default shared_buffers ... 128MB
+db-eu      | selecting default time zone ... Etc/UTC
+db-eu      | creating configuration files ... ok
+db-eu      | running bootstrap script ... ok
+db-eu      | performing post-bootstrap initialization ... ok
+db-eu      | initdb: warning: enabling "trust" authentication for local connections
+db-eu      | You can change this by editing pg_hba.conf or using the option -A, or
+db-eu      | --auth-local and --auth-host, the next time you run initdb.
+db-eu      | syncing data to disk ... ok
+db-eu      | 
+db-eu      | 
+db-eu      | Success. You can now start the database server using:
+db-eu      | 
+db-eu      |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-eu      | 
+db-eu      | waiting for server to start....2026-03-05 05:59:54.655 UTC [48] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-eu      | 2026-03-05 05:59:54.682 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-eu      | 2026-03-05 05:59:54.762 UTC [49] LOG:  database system was shut down at 2026-03-05 05:59:53 UTC
+db-eu      | 2026-03-05 05:59:54.790 UTC [48] LOG:  database system is ready to accept connections
+db-eu      |  done
+db-eu      | server started
+db-eu      | CREATE DATABASE
+db-eu      | 
+db-eu      | 
+db-eu      | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+db-eu      | CREATE EXTENSION
+db-eu      | CREATE TABLE
+db-eu      | CREATE INDEX
+db-eu      | CREATE INDEX
+db-eu      | 
+db-eu      | 
+db-eu      | waiting for server to shut down...2026-03-05 05:59:55.782 UTC [48] LOG:  received fast shutdown request
+db-eu      | .2026-03-05 05:59:55.788 UTC [48] LOG:  aborting any active transactions
+db-eu      | 2026-03-05 05:59:55.796 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+db-eu      | 2026-03-05 05:59:55.797 UTC [50] LOG:  shutting down
+db-eu      | 2026-03-05 05:59:55.916 UTC [48] LOG:  database system is shut down
+db-eu      |  done
+db-eu      | server stopped
+db-eu      | 
+db-eu      | PostgreSQL init process complete; ready for start up.
+db-eu      | 
+db-eu      | 2026-03-05 05:59:56.078 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-eu      | 2026-03-05 05:59:56.079 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-eu      | 2026-03-05 05:59:56.079 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-eu      | 2026-03-05 05:59:56.099 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-eu      | 2026-03-05 05:59:56.117 UTC [73] LOG:  database system was shut down at 2026-03-05 05:59:55 UTC
+db-eu      | 2026-03-05 05:59:56.141 UTC [1] LOG:  database system is ready to accept connections
+db-eu      | 2026-03-05 06:16:16.093 UTC [1] LOG:  received fast shutdown request
+db-eu      | 2026-03-05 06:16:16.096 UTC [1] LOG:  aborting any active transactions
+db-eu      | 2026-03-05 06:16:16.098 UTC [1] LOG:  background worker "logical replication launcher" (PID 79) exited with exit code 1
+db-eu      | 2026-03-05 06:16:16.098 UTC [74] LOG:  shutting down
+db-eu      | 2026-03-05 06:16:16.113 UTC [1] LOG:  database system is shut down
+db-eu      | 
+db-eu      | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-eu      | 
+db-eu      | 2026-03-05 06:18:11.464 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-eu      | 2026-03-05 06:18:11.464 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-eu      | 2026-03-05 06:18:11.464 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-eu      | 2026-03-05 06:18:11.471 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-eu      | 2026-03-05 06:18:11.479 UTC [27] LOG:  database system was shut down at 2026-03-05 06:16:16 UTC
+db-eu      | 2026-03-05 06:18:11.486 UTC [1] LOG:  database system is ready to accept connections
+region-us  | INFO:     Started server process [1]
+region-us  | INFO:     Waiting for application startup.
+region-us  | 2026-03-05 05:59:58,671 [INFO] app.main: Starting region service: us
+region-us  | 2026-03-05 05:59:58,759 [INFO] app.replication: [Replication Worker] started for region=us, peers=['http://region-eu:8000', 'http://region-apac:8000'], interval=5s
+region-us  | INFO:     Application startup complete.
+region-us  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+region-us  | INFO:     127.0.0.1:47902 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:54586 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:33358 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:42666 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:37128 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:37772 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:48088 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:38446 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:34642 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:35178 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:39356 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:57934 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:56418 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:60684 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:45536 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:49214 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:58206 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:33816 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:40138 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:53634 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:34698 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:46274 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41318 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:49542 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:46300 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:44104 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:49578 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41662 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:51730 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:50292 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:46910 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:45542 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:60718 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:59942 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:57114 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:36708 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:48938 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:56976 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:48132 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:38920 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:60632 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:54604 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:38526 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:53014 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:42394 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:33608 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41730 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:38898 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:42634 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:42518 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:45882 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:47986 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:59874 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:46998 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:48800 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41180 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:34916 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:57354 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:46318 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:43876 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:35792 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:51306 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:44768 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:48368 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:40532 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:54594 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:47226 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:51844 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:53684 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55216 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:59148 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:43576 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:38748 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41906 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55486 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:45760 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:58972 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55764 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:40308 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:57694 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:37162 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:37840 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:38894 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55370 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:46076 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:58156 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:60998 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:58890 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:49136 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41312 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:60118 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55348 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:37074 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:41628 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:50336 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     Shutting down
+region-us  | INFO:     Waiting for application shutdown.
+region-us  | INFO:     Application shutdown complete.
+region-us  | INFO:     Finished server process [1]
+region-us  | INFO:     Started server process [1]
+region-us  | INFO:     Waiting for application startup.
+region-us  | 2026-03-05 06:18:17,966 [INFO] app.main: Starting region service: us
+region-us  | 2026-03-05 06:18:17,996 [INFO] app.replication: [Replication Worker] started for region=us, peers=['http://region-eu:8000', 'http://region-apac:8000'], interval=5s
+region-us  | INFO:     Application startup complete.
+region-us  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+region-us  | INFO:     127.0.0.1:45864 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:45864 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55276 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:54068 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:39580 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:55570 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:42930 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:44022 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:35348 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:52448 - "GET /health HTTP/1.1" 200 OK
+region-us  | INFO:     127.0.0.1:36996 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     Started server process [1]
+region-apac  | INFO:     Waiting for application startup.
+region-apac  | 2026-03-05 05:59:58,735 [INFO] app.main: Starting region service: apac
+region-apac  | 2026-03-05 05:59:58,819 [INFO] app.replication: [Replication Worker] started for region=apac, peers=['http://region-us:8000', 'http://region-eu:8000'], interval=5s
+region-apac  | INFO:     Application startup complete.
+region-apac  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+region-apac  | INFO:     127.0.0.1:47892 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:54572 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:33356 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:42676 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:37130 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:37776 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:48098 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:38462 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:34626 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:35184 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:39330 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:57922 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:56402 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:60714 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:45512 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:49202 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:58196 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:33790 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:40124 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:53626 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:34692 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:46262 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41308 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:49554 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:46310 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:44108 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:49594 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41656 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:51718 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:50278 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:46900 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:45530 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:60710 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:59944 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:57106 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:36724 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:48950 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:56960 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:48112 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:38916 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:60618 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:54602 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:38506 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:53022 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:42400 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:33608 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41742 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:38902 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:42650 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:42530 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:45894 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:47986 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:59878 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:47010 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:48814 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41186 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:34932 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:57368 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:46332 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:43866 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:35782 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:51324 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:44750 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:48386 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:40536 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:54596 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:47228 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:51868 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:53670 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:55210 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:59140 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:43566 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:38750 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41916 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:55470 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:45770 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:58984 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:55782 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:40316 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:57710 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:37150 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:37848 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:38886 - "GET /health HTTP/1.1" 200 OK
+db-us        | The files belonging to this database system will be owned by user "postgres".
+db-us        | This user must also own the server process.
+db-us        | 
+db-us        | The database cluster will be initialized with locale "en_US.utf8".
+region-apac  | INFO:     127.0.0.1:55346 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:46072 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:58166 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:32780 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:58872 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:49120 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41310 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:60132 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:55364 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:37080 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:41628 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:50358 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     Shutting down
+region-apac  | INFO:     Waiting for application shutdown.
+region-apac  | INFO:     Application shutdown complete.
+region-apac  | INFO:     Finished server process [1]
+region-apac  | INFO:     Started server process [1]
+region-apac  | INFO:     Waiting for application startup.
+db-us        | The default database encoding has accordingly been set to "UTF8".
+db-us        | The default text search configuration will be set to "english".
+db-us        | 
+db-us        | Data page checksums are disabled.
+db-us        | 
+region-apac  | 2026-03-05 06:18:18,041 [INFO] app.main: Starting region service: apac
+region-apac  | 2026-03-05 06:18:18,064 [INFO] app.replication: [Replication Worker] started for region=apac, peers=['http://region-us:8000', 'http://region-eu:8000'], interval=5s
+db-us        | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-us        | creating subdirectories ... ok
+db-us        | selecting dynamic shared memory implementation ... posix
+db-us        | selecting default max_connections ... 100
+db-us        | selecting default shared_buffers ... 128MB
+db-us        | selecting default time zone ... Etc/UTC
+db-us        | creating configuration files ... ok
+db-us        | running bootstrap script ... ok
+db-us        | performing post-bootstrap initialization ... ok
+db-us        | syncing data to disk ... ok
+db-us        | 
+db-us        | 
+db-us        | Success. You can now start the database server using:
+db-us        | 
+db-us        |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-us        | 
+db-us        | initdb: warning: enabling "trust" authentication for local connections
+db-us        | You can change this by editing pg_hba.conf or using the option -A, or
+db-us        | --auth-local and --auth-host, the next time you run initdb.
+db-us        | waiting for server to start....2026-03-05 05:59:54.594 UTC [48] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-us        | 2026-03-05 05:59:54.608 UTC [48] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-us        | 2026-03-05 05:59:54.720 UTC [49] LOG:  database system was shut down at 2026-03-05 05:59:53 UTC
+db-us        | 2026-03-05 05:59:54.736 UTC [48] LOG:  database system is ready to accept connections
+db-us        |  done
+db-us        | server started
+db-us        | CREATE DATABASE
+db-us        | 
+region-apac  | INFO:     Application startup complete.
+region-apac  | INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+region-apac  | INFO:     127.0.0.1:45874 - "GET /health HTTP/1.1" 200 OK
+db-us        | 
+db-us        | /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+region-apac  | INFO:     127.0.0.1:45876 - "GET /health HTTP/1.1" 200 OK
+db-us        | CREATE EXTENSION
+region-apac  | INFO:     127.0.0.1:55280 - "GET /health HTTP/1.1" 200 OK
+db-us        | CREATE TABLE
+db-us        | CREATE INDEX
+db-us        | CREATE INDEX
+db-us        | 
+db-us        | 
+db-us        | waiting for server to shut down...2026-03-05 05:59:55.617 UTC [48] LOG:  received fast shutdown request
+db-us        | .2026-03-05 05:59:55.625 UTC [48] LOG:  aborting any active transactions
+region-apac  | INFO:     127.0.0.1:54076 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:39592 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:55586 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:42948 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:44030 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:35356 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:52462 - "GET /health HTTP/1.1" 200 OK
+region-apac  | INFO:     127.0.0.1:37016 - "GET /health HTTP/1.1" 200 OK
+db-us        | 2026-03-05 05:59:55.635 UTC [48] LOG:  background worker "logical replication launcher" (PID 55) exited with exit code 1
+db-us        | 2026-03-05 05:59:55.635 UTC [50] LOG:  shutting down
+db-us        | 2026-03-05 05:59:55.791 UTC [48] LOG:  database system is shut down
+db-us        |  done
+db-us        | server stopped
+db-us        | 
+db-us        | PostgreSQL init process complete; ready for start up.
+db-us        | 
+db-us        | 2026-03-05 05:59:55.876 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-us        | 2026-03-05 05:59:55.878 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-us        | 2026-03-05 05:59:55.878 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-us        | 2026-03-05 05:59:55.890 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-us        | 2026-03-05 05:59:55.907 UTC [73] LOG:  database system was shut down at 2026-03-05 05:59:55 UTC
+db-us        | 2026-03-05 05:59:55.928 UTC [1] LOG:  database system is ready to accept connections
+db-us        | 2026-03-05 06:16:15.666 UTC [1] LOG:  received fast shutdown request
+db-us        | 2026-03-05 06:16:15.670 UTC [1] LOG:  aborting any active transactions
+db-us        | 2026-03-05 06:16:15.671 UTC [1] LOG:  background worker "logical replication launcher" (PID 79) exited with exit code 1
+db-us        | 2026-03-05 06:16:15.672 UTC [74] LOG:  shutting down
+db-us        | 2026-03-05 06:16:15.689 UTC [1] LOG:  database system is shut down
+db-us        | 
+db-us        | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db-us        | 
+db-us        | 2026-03-05 06:18:11.400 UTC [1] LOG:  starting PostgreSQL 13.23 (Debian 13.23-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+db-us        | 2026-03-05 06:18:11.401 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-us        | 2026-03-05 06:18:11.401 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-us        | 2026-03-05 06:18:11.411 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-us        | 2026-03-05 06:18:11.422 UTC [27] LOG:  database system was shut down at 2026-03-05 06:16:15 UTC
+db-us        | 2026-03-05 06:18:11.432 UTC [1] LOG:  database system is ready to accept connections
