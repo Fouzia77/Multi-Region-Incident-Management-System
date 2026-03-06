@@ -1,0 +1,133 @@
+version: '3.8'
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Shared healthcheck for PostgreSQL databases
+# ─────────────────────────────────────────────────────────────────────────────
+x-db-healthcheck: &db-healthcheck
+  test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+  interval: 10s
+  timeout: 5s
+  retries: 5
+  start_period: 15s
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Shared healthcheck for application services
+# ─────────────────────────────────────────────────────────────────────────────
+x-app-healthcheck: &app-healthcheck
+  test: [ "CMD-SHELL", "curl -f http://localhost:8000/health || exit 1" ]
+  interval: 10s
+  timeout: 5s
+  retries: 10
+  start_period: 30s
+
+services:
+
+  # ─── US ────────────────────────────────────────────────────────────────────
+
+  db-us:
+    image: postgres:13
+    container_name: db-us
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: incidents
+    volumes:
+      - db-us-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck: *db-healthcheck
+    networks:
+      - incident-net
+
+  region-us:
+    build: .
+    container_name: region-us
+    environment:
+      REGION_ID: us
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db-us:5432/incidents
+      PEER_URLS: http://region-eu:8000,http://region-apac:8000
+      REPLICATION_INTERVAL: "5"
+    ports:
+      - "8001:8000"
+    depends_on:
+      db-us:
+        condition: service_healthy
+    healthcheck: *app-healthcheck
+    networks:
+      - incident-net
+
+  # ─── EU ────────────────────────────────────────────────────────────────────
+
+  db-eu:
+    image: postgres:13
+    container_name: db-eu
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: incidents
+    volumes:
+      - db-eu-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck: *db-healthcheck
+    networks:
+      - incident-net
+
+  region-eu:
+    build: .
+    container_name: region-eu
+    environment:
+      REGION_ID: eu
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db-eu:5432/incidents
+      PEER_URLS: http://region-us:8000,http://region-apac:8000
+      REPLICATION_INTERVAL: "5"
+    ports:
+      - "8002:8000"
+    depends_on:
+      db-eu:
+        condition: service_healthy
+    healthcheck: *app-healthcheck
+    networks:
+      - incident-net
+
+  # ─── APAC ──────────────────────────────────────────────────────────────────
+
+  db-apac:
+    image: postgres:13
+    container_name: db-apac
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: incidents
+    volumes:
+      - db-apac-data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck: *db-healthcheck
+    networks:
+      - incident-net
+
+  region-apac:
+    build: .
+    container_name: region-apac
+    environment:
+      REGION_ID: apac
+      DATABASE_URL: postgresql+asyncpg://postgres:postgres@db-apac:5432/incidents
+      PEER_URLS: http://region-us:8000,http://region-eu:8000
+      REPLICATION_INTERVAL: "5"
+    ports:
+      - "8003:8000"
+    depends_on:
+      db-apac:
+        condition: service_healthy
+    healthcheck: *app-healthcheck
+    networks:
+      - incident-net
+
+# ─────────────────────────────────────────────────────────────────────────────
+volumes:
+  db-us-data:
+  db-eu-data:
+  db-apac-data:
+
+
+networks:
+  incident-net:
+    driver: bridge
